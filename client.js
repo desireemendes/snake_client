@@ -12,14 +12,15 @@ const connect = function() {
 
   conn.on('connect', () => {
     console.log('Successfully connected to game server!');
-    connection.write("Name: DES");
+    conn.write("Name: DES");
   });
 
-  conn.on('data', (data) => {
-    console.log(data);
-  });
+  // conn.on('data', (data) => {
+  //   console.log(data);
+  // });
   
   return conn;
 };
+
 
 module.exports = {connect};
